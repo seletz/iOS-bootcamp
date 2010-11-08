@@ -11,10 +11,33 @@
 @implementation QuizAppDelegate
 
 @synthesize window;
+@synthesize questionLabel;
+@synthesize answerLabel;
 
 
 #pragma mark -
 #pragma mark Application lifecycle
+
+
+- (id)init
+{
+	if (self = [super init]) {
+		answers = [[NSMutableArray alloc] init];
+		questions = [[NSMutableArray alloc] init];
+
+		[questions addObject:@"What time is it?"];
+		[answers addObject:@"I don't know dumbo"];
+
+		[questions addObject:@"What is your name?"];
+		[answers addObject:@"I don't know either"];
+
+	}
+	return self;
+}
+
+#pragma mark -
+#pragma mark Application delegate methods {{{
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
@@ -63,6 +86,30 @@
      */
 }
 
+#pragma mark - }}}
+#pragma mark actions
+
+- (IBAction)showQuestion:(id)sender
+{
+	DBGS;
+
+	currentQuestionIndex += 1;
+	currentQuestionIndex = currentQuestionIndex % [questions count];
+
+	NSString *question = [questions objectAtIndex:currentQuestionIndex];
+
+	[questionLabel setText:question];
+	[answerLabel setText:@"???"];
+}
+
+- (IBAction)showAnswer:(id)sender
+{
+	DBGS;
+
+	NSString *answer = [answers objectAtIndex:currentQuestionIndex];
+	[answerLabel setText:answer];
+}
+
 
 #pragma mark -
 #pragma mark Memory management
@@ -76,6 +123,8 @@
 
 - (void)dealloc {
     [window release];
+	[questions release];
+	[answers release];
     [super dealloc];
 }
 
