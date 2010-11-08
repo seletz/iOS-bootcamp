@@ -16,7 +16,7 @@
 
 
 #pragma mark -
-#pragma mark Application lifecycle
+#pragma mark Application lifecycle {{{1
 
 
 - (id)init
@@ -36,7 +36,7 @@
 }
 
 #pragma mark -
-#pragma mark Application delegate methods {{{
+#pragma mark Application delegate methods {{{1
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
@@ -86,8 +86,8 @@
      */
 }
 
-#pragma mark - }}}
-#pragma mark actions
+#pragma mark -
+#pragma mark actions {{{1
 
 - (IBAction)showQuestion:(id)sender
 {
@@ -112,7 +112,7 @@
 
 
 #pragma mark -
-#pragma mark Memory management
+#pragma mark Memory management {{{1
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
     /*
