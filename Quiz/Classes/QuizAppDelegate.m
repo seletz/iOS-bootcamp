@@ -43,8 +43,8 @@
     
     // Override point for customization after application launch.
     
+	[self showQuestion:nil];
     [window makeKeyAndVisible];
-    
     return YES;
 }
 
