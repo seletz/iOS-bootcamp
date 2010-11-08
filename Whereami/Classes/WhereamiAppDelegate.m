@@ -10,18 +10,41 @@
 
 @implementation WhereamiAppDelegate
 
+#pragma mark -
+#pragma mark properties {{{1
+
 @synthesize window;
 
+@synthesize textField;
+@synthesize activityIndicator;
+@synthesize distanceSlider;
+@synthesize mapView;
 
 #pragma mark -
-#pragma mark Application lifecycle
+#pragma mark Application lifecycle {{{1
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    DBGS;
+
+    // safeguard against forgotten IB outlets
+    assert(window);
+    assert(textField);
+    assert(activityIndicator);
+    assert(distanceSlider);
+    assert(mapView);
+
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDelegate:self];
+
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [locationManager startUpdatingLocation];
+
     
-    // Override point for customization after application launch.
-    
+
+    [textField setDelegate:self];
     [window makeKeyAndVisible];
-    
     return YES;
 }
 
@@ -63,9 +86,106 @@
      */
 }
 
+#pragma mark -
+#pragma mark UI Update {{{1
+
+- (void)updateUI
+{
+    DBGS;
+    DBG(currentLocation);
+
+    int zoom = distanceSlider.value;
+
+    NSLog(@"zoom=%d", zoom);
+
+    // Update the MapKit View
+    [mapView setCenterCoordinate: [currentLocation coordinate]
+                       zoomLevel: zoom
+                        animated: YES];
+}
 
 #pragma mark -
-#pragma mark Memory management
+#pragma mark Accessors {{{1
+
+- (CLLocation *)currentLocation
+{
+    return currentLocation;
+}
+
+- (void)setCurrentLocation:(CLLocation *)loc
+{
+    DBG(loc);
+
+    [loc retain];
+    [currentLocation release];
+    currentLocation = loc;
+}
+
+#pragma mark -
+#pragma mark Actions {{{1
+
+- (IBAction)locationEntered:(id)sender
+{
+    DBGS;
+
+    DBG(textField.text);
+
+    [self updateUI];
+}
+
+- (IBAction)distanceChanged:(id)sender
+{
+    DBGS;
+    [self updateUI];
+}
+
+#pragma mark -
+#pragma mark Location Manager Delegate {{{1
+
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    DBGS;
+    DBG(newLocation);
+
+    self.currentLocation = newLocation;
+
+    [self updateUI];
+}
+
+#pragma mark -
+#pragma mark UITextFieldDelegate methods {{{1
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    DBGS;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    DBGS;
+}
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    DBGS;
+    return YES;
+}
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    DBGS;
+    return YES;
+}
+    
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    DBGS;
+    [textField resignFirstResponder];
+    return NO;
+    
+}
+
+#pragma mark -
+#pragma mark Memory management {{{1
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
     /*
@@ -76,8 +196,11 @@
 
 - (void)dealloc {
     [window release];
+    [locationManager release];
     [super dealloc];
 }
 
 
-@end
+@end // }}}
+
+// vim: set ts=4 sw=4 expandtab:
