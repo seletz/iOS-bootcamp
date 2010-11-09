@@ -41,8 +41,6 @@
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     [locationManager startUpdatingLocation];
 
-    
-
     [textField setDelegate:self];
     [window makeKeyAndVisible];
     return YES;
@@ -179,6 +177,9 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     DBGS;
+
+    // make the keyboard actually go away by telling teh textfield
+    // to resign its first responder status
     [textField resignFirstResponder];
     return NO;
     
@@ -195,8 +196,10 @@
 
 
 - (void)dealloc {
-    [window release];
+    [locationManager setDelegate:nil];
     [locationManager release];
+
+    [window release];
     [super dealloc];
 }
 
