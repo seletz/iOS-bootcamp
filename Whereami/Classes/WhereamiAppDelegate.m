@@ -41,12 +41,14 @@
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     [locationManager startUpdatingLocation];
 
+    [mapView setDelegate:self];
+
     [textField setDelegate:self];
     [window makeKeyAndVisible];
     return YES;
 }
 
-
+// UIApplication Delecate methods {{{2
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -83,6 +85,7 @@
      See also applicationDidEnterBackground:.
      */
 }
+// }}}2
 
 #pragma mark -
 #pragma mark UI Update {{{1
@@ -186,6 +189,30 @@
 }
 
 #pragma mark -
+#pragma mark MKMapViewDelegate {{{1
+
+- (MKAnnotationView *)mapView:(MKMapView *)theMapView
+            viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    // try to dequeue an existing pin view first
+    static NSString* AnnotationIdentifier = @"AnnotationIdentifier";
+    MKPinAnnotationView* pinView = (MKPinAnnotationView *)
+        [mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationIdentifier];
+    if (!pinView) {
+        // if an existing pin view was not available, create one
+        pinView = [[[MKPinAnnotationView alloc]
+                            initWithAnnotation:annotation
+                               reuseIdentifier:AnnotationIdentifier] autorelease];
+        pinView.pinColor = MKPinAnnotationColorPurple;
+        pinView.animatesDrop = YES;
+        pinView.canShowCallout = YES;
+    } else {
+        pinView.annotation = annotation;
+    }
+    return pinView;
+}
+
+#pragma mark -
 #pragma mark Memory management {{{1
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
@@ -198,6 +225,8 @@
 - (void)dealloc {
     [locationManager setDelegate:nil];
     [locationManager release];
+
+    [mapView setDelegate:nil];
 
     [window release];
     [super dealloc];

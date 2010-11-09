@@ -235,7 +235,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>BF205B6B12893C0700C7BEBD</string>
+						<string>BF205BB412895E5600C7BEBD</string>
 						<key>history</key>
 						<array>
 							<string>BF205B5312893B2600C7BEBD</string>
@@ -289,8 +289,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -334,7 +332,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>4</integer>
+									<integer>6</integer>
+									<integer>1</integer>
+									<integer>0</integer>
+								</array>
+								<array>
+									<integer>7</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -375,7 +378,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>WhereamiAppDelegate.h</string>
+								<string>MapAnnotation.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -383,15 +386,17 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>WhereamiAppDelegate.h</string>
+										<string>MapAnnotation.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BF205B6812893C0700C7BEBD</string>
+										<string>BF205BB312895E5600C7BEBD</string>
 										<key>history</key>
 										<array>
 											<string>BF205B6712893C0700C7BEBD</string>
-											<string>BF205A971288ABBE00C7BEBD</string>
+											<string>BF205B9F128950AF00C7BEBD</string>
+											<string>BF205BA0128950AF00C7BEBD</string>
+											<string>BF205BA1128950AF00C7BEBD</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -413,6 +418,8 @@
 							<string>584pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -572,7 +579,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>310983687.12396997</real>
+	<real>310992470.59041399</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -589,13 +596,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>BF205B6912893C0700C7BEBD</string>
 		<string>BF205AC41288ADB100C7BEBD</string>
 		<string>BF2059CE12885E1A00C7BEBD</string>
 		<string>BF2059D012885E1A00C7BEBD</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>BF20598B1288571300C7BEBD</string>
+		<string>BF205B6912893C0700C7BEBD</string>
 		<string>/Users/seletz/develop/BNR/iOS_1/Whereami/Whereami.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -620,7 +627,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>WhereamiAppDelegate.m</string>
+								<string>MapAnnotation.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>

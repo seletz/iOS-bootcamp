@@ -11,6 +11,7 @@
 #import <MapKit/MKMapView.h>
 
 #import "MKMapView+ZoomLevel.h"
+#import "MapAnnotation.h"
 
 #define DBGS   NSLog(@"%s start", __PRETTY_FUNCTION__)
 #define DBG(x) NSLog(@"%s %s=%@", __PRETTY_FUNCTION__, #x, x)

@@ -16,6 +16,7 @@
 		BF205992128857E700C7BEBD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF205991128857E700C7BEBD /* CoreLocation.framework */; };
 		BF2059DA12885EC800C7BEBD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2059D912885EC800C7BEBD /* MapKit.framework */; };
 		BF205AFE1288B2E900C7BEBD /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF205AFC1288B2E900C7BEBD /* MKMapView+ZoomLevel.m */; };
+		BF205B9912894F2700C7BEBD /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BF205B9812894F2700C7BEBD /* MapAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		BF2059D912885EC800C7BEBD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BF205AFC1288B2E900C7BEBD /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
 		BF205AFD1288B2E900C7BEBD /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
+		BF205B9712894F2700C7BEBD /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		BF205B9812894F2700C7BEBD /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 				BF205AFD1288B2E900C7BEBD /* MKMapView+ZoomLevel.h */,
 				1D3623240D0F684500981E51 /* WhereamiAppDelegate.h */,
 				1D3623250D0F684500981E51 /* WhereamiAppDelegate.m */,
+				BF205B9712894F2700C7BEBD /* MapAnnotation.h */,
+				BF205B9812894F2700C7BEBD /* MapAnnotation.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* WhereamiAppDelegate.m in Sources */,
 				BF205AFE1288B2E900C7BEBD /* MKMapView+ZoomLevel.m in Sources */,
+				BF205B9912894F2700C7BEBD /* MapAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
