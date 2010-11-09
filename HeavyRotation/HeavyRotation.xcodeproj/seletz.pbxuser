@@ -21,6 +21,8 @@
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* HeavyRotation */,
 		);
+		breakpoints = (
+		);
 		codeSenseManager = BF205C3E128989A800C7BEBD /* Code sense */;
 		executables = (
 			BF205C34128989A200C7BEBD /* HeavyRotation */,
@@ -85,7 +87,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
