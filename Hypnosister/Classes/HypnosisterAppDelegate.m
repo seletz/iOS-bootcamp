@@ -8,24 +8,44 @@
 
 #import "HypnosisterAppDelegate.h"
 
+#define DBGS   NSLog(@"%s start", __PRETTY_FUNCTION__)
+#define DBG(x) NSLog(@"%s %s=%@", __PRETTY_FUNCTION__, #x, x)
+
 @implementation HypnosisterAppDelegate
 
+#pragma mark -
+#pragma mark properties {{{1
+
 @synthesize window;
+//@synthesize hypnoView;
 
 
 #pragma mark -
-#pragma mark Application lifecycle
+#pragma mark Application lifecycle {{{1
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-    // Override point for customization after application launch.
-    
+- (BOOL)                 application:(UIApplication *)application
+       didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    DBGS;
+
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:window.bounds];
+    [scrollView setContentSize:CGSizeMake(1024, 1024)];
+
+    UIView *view = [[HypnosisView alloc] initWithFrame:CGRectMake(0, 0, 1024, 1024)];
+    [view setBackgroundColor: [UIColor clearColor]];
+
+    // Build view hierarchy
+    [scrollView addSubview:view];
+    [window addSubview:scrollView];
+
     [window makeKeyAndVisible];
-    
+
     return YES;
 }
 
 
+// UIApplication Delegate {{{2
+//
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -62,10 +82,11 @@
      See also applicationDidEnterBackground:.
      */
 }
+// }}}2
 
 
 #pragma mark -
-#pragma mark Memory management
+#pragma mark Memory management {{{1
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
     /*
@@ -80,4 +101,9 @@
 }
 
 
+#pragma mark - }}}1
+#pragma mark EOF
+
 @end
+
+// vim: set ts=4 sw=4 expandtab tw=78 : 

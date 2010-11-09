@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-int main(int argc, char *argv[]) {
-    
+#define DBGS   NSLog(@"%s start", __PRETTY_FUNCTION__)
+#define DBG(x) NSLog(@"%s %s=%@", __PRETTY_FUNCTION__, #x, x)
+
+int main(int argc, char *argv[])
+{
+	DBGS;
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
     int retVal = UIApplicationMain(argc, argv, nil, nil);
     [pool release];
