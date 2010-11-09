@@ -6,6 +6,7 @@
 //  Copyright 2010 Nexiles GmbH. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import "HeavyRotationAppDelegate.h"
 
 #define DBGS   NSLog(@"%s start", __PRETTY_FUNCTION__)
@@ -25,11 +26,25 @@
     [window setRootViewController:viewController];
     [window makeKeyAndVisible];
 
+    [[NSNotificationCenter defaultCenter]
+        addObserver: self
+           selector: @selector(notificationReceived:)
+               name: nil
+             object: nil];
+
+    [[NSNotificationCenter defaultCenter]
+        addObserver: self
+           selector: @selector(orientationChanged:)
+               name: UIDeviceOrientationDidChangeNotification
+             object: [UIDevice currentDevice]];
+
+
     [viewController release];
     return YES;
 }
 
 
+// {{{2
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -66,7 +81,21 @@
      See also applicationDidEnterBackground:.
      */
 }
+// }}}2
 
+#pragma mark -
+#pragma mark Notification Handling {{{1
+
+- (void)notificationReceived:(NSNotification *)note
+{
+    DBG(note.name);
+}
+
+- (void)orientationChanged:(NSNotification *)note
+{
+    DBGS;
+    NSLog(@"orientation -> %d", [[note object] orientation]);
+}
 
 #pragma mark -
 #pragma mark Memory management
