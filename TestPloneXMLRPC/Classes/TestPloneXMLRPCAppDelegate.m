@@ -9,6 +9,7 @@
 #import "TestPloneXMLRPCAppDelegate.h"
 
 
+
 #define DBGS   NSLog(@"%s start", __PRETTY_FUNCTION__)
 #define DBG(x) NSLog(@"%s %s=%@", __PRETTY_FUNCTION__, #x, x)
 
@@ -24,59 +25,33 @@
 {
     DBGS;
 
-    NSURL *URL = [NSURL URLWithString: @"http://127.0.0.1:8080/plone"];
-    XMLRPCRequest *request = [[XMLRPCRequest alloc] initWithURL: URL];
-    XMLRPCConnectionManager *manager = [XMLRPCConnectionManager sharedManager];
+    PloneController *ploneController = [[PloneController alloc] init];
 
+    [ploneController setDelegate: self];
 
-    NSArray *params = [[NSArray alloc] initWithObjects:@"news/foo-news", nil];
-    [request setMethod: @"get_object" withParameter:params];
-    NSLog(@"Request body: %@", [request body]);
-    [manager spawnConnectionWithXMLRPCRequest: request delegate: self];
+    [ploneController fetchObject:@"news/foo-news"];
+    [ploneController fetchObject:@"news/foo-news"];
 
     [window makeKeyAndVisible];
-
-    [params release];
-    [request release];
     return YES;
 }
 
 #pragma mark -
-#pragma mark XMLRPCConnectionDelegate Methods {{{1
+#pragma mark PloneControllerDelegate Methods {{{1
 
-- (void)    request: (XMLRPCRequest *)request
- didReceiveResponse: (XMLRPCResponse *)response
+- (void)didReceiveObject:(PloneContentModel *)object forPath:(NSString *)path
 {
-    DBGS;
-
-    id object = [response object];
-
     DBG(object);
+    DBG(path);
+
+    NSLog(@"object: retaincount=%d", [object retainCount]);
+    NSLog(@"path: retaincount=%d", [path retainCount]);
 }
 
-
-- (void)    request:(XMLRPCRequest *)request
-   didFailWithError: (NSError *)error;
+- (void)didFailWithError:(NSError *)error
 {
-    DBGS;
+    DBG(error);
 }
-
-- (BOOL)request: (XMLRPCRequest *)request canAuthenticateAgainstProtectionSpace: (NSURLProtectionSpace *)protectionSpace
-{
-    DBGS;
-    return NO;
-}
-
-- (void)request: (XMLRPCRequest *)request didReceiveAuthenticationChallenge: (NSURLAuthenticationChallenge *)challenge
-{
-    DBGS;
-}
-
-- (void)request: (XMLRPCRequest *)request didCancelAuthenticationChallenge: (NSURLAuthenticationChallenge *)challenge
-{
-    DBGS;
-}
-
 
 #pragma mark -
 #pragma mark Application lifecycle {{{1

@@ -22,6 +22,8 @@
 		BF205D391289BEA200C7BEBD /* XMLRPCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BF205D321289BEA200C7BEBD /* XMLRPCResponse.m */; };
 		BF205D3E1289BEAC00C7BEBD /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF205D3B1289BEAC00C7BEBD /* NSDataAdditions.m */; };
 		BF205D3F1289BEAC00C7BEBD /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF205D3D1289BEAC00C7BEBD /* NSStringAdditions.m */; };
+		BF205DC21289F99300C7BEBD /* PloneContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF205DC11289F99300C7BEBD /* PloneContentModel.m */; };
+		BF205DC51289FBCE00C7BEBD /* PloneController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF205DC41289FBCE00C7BEBD /* PloneController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,10 @@
 		BF205D3B1289BEAC00C7BEBD /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAdditions.m; sourceTree = "<group>"; };
 		BF205D3C1289BEAC00C7BEBD /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringAdditions.h; sourceTree = "<group>"; };
 		BF205D3D1289BEAC00C7BEBD /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringAdditions.m; sourceTree = "<group>"; };
+		BF205DC01289F99300C7BEBD /* PloneContentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PloneContentModel.h; sourceTree = "<group>"; };
+		BF205DC11289F99300C7BEBD /* PloneContentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PloneContentModel.m; sourceTree = "<group>"; };
+		BF205DC31289FBCE00C7BEBD /* PloneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PloneController.h; sourceTree = "<group>"; };
+		BF205DC41289FBCE00C7BEBD /* PloneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PloneController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,29 +80,13 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BF205D3A1289BEAC00C7BEBD /* NSDataAdditions.h */,
-				BF205D3B1289BEAC00C7BEBD /* NSDataAdditions.m */,
-				BF205D3C1289BEAC00C7BEBD /* NSStringAdditions.h */,
-				BF205D3D1289BEAC00C7BEBD /* NSStringAdditions.m */,
-				BF205D231289BEA200C7BEBD /* XMLRPC.h */,
-				BF205D241289BEA200C7BEBD /* XMLRPCConnection.h */,
-				BF205D251289BEA200C7BEBD /* XMLRPCConnection.m */,
-				BF205D261289BEA200C7BEBD /* XMLRPCConnectionDelegate.h */,
-				BF205D271289BEA200C7BEBD /* XMLRPCConnectionManager.h */,
-				BF205D281289BEA200C7BEBD /* XMLRPCConnectionManager.m */,
-				BF205D291289BEA200C7BEBD /* XMLRPCEncoder.h */,
-				BF205D2A1289BEA200C7BEBD /* XMLRPCEncoder.m */,
-				BF205D2B1289BEA200C7BEBD /* XMLRPCEventBasedParser.h */,
-				BF205D2C1289BEA200C7BEBD /* XMLRPCEventBasedParser.m */,
-				BF205D2D1289BEA200C7BEBD /* XMLRPCEventBasedParserDelegate.h */,
-				BF205D2E1289BEA200C7BEBD /* XMLRPCEventBasedParserDelegate.m */,
-				BF205D2F1289BEA200C7BEBD /* XMLRPCRequest.h */,
-				BF205D301289BEA200C7BEBD /* XMLRPCRequest.m */,
-				BF205D311289BEA200C7BEBD /* XMLRPCResponse.h */,
-				BF205D321289BEA200C7BEBD /* XMLRPCResponse.m */,
-				BF205D221289BE9000C7BEBD /* XMLRPC */,
+				BF205DBF1289F95F00C7BEBD /* XMLRPC */,
 				1D3623240D0F684500981E51 /* TestPloneXMLRPCAppDelegate.h */,
 				1D3623250D0F684500981E51 /* TestPloneXMLRPCAppDelegate.m */,
+				BF205DC01289F99300C7BEBD /* PloneContentModel.h */,
+				BF205DC11289F99300C7BEBD /* PloneContentModel.m */,
+				BF205DC31289FBCE00C7BEBD /* PloneController.h */,
+				BF205DC41289FBCE00C7BEBD /* PloneController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -149,9 +139,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BF205D221289BE9000C7BEBD /* XMLRPC */ = {
+		BF205DBF1289F95F00C7BEBD /* XMLRPC */ = {
 			isa = PBXGroup;
 			children = (
+				BF205D3A1289BEAC00C7BEBD /* NSDataAdditions.h */,
+				BF205D3B1289BEAC00C7BEBD /* NSDataAdditions.m */,
+				BF205D3C1289BEAC00C7BEBD /* NSStringAdditions.h */,
+				BF205D3D1289BEAC00C7BEBD /* NSStringAdditions.m */,
+				BF205D231289BEA200C7BEBD /* XMLRPC.h */,
+				BF205D241289BEA200C7BEBD /* XMLRPCConnection.h */,
+				BF205D251289BEA200C7BEBD /* XMLRPCConnection.m */,
+				BF205D261289BEA200C7BEBD /* XMLRPCConnectionDelegate.h */,
+				BF205D271289BEA200C7BEBD /* XMLRPCConnectionManager.h */,
+				BF205D281289BEA200C7BEBD /* XMLRPCConnectionManager.m */,
+				BF205D291289BEA200C7BEBD /* XMLRPCEncoder.h */,
+				BF205D2A1289BEA200C7BEBD /* XMLRPCEncoder.m */,
+				BF205D2B1289BEA200C7BEBD /* XMLRPCEventBasedParser.h */,
+				BF205D2C1289BEA200C7BEBD /* XMLRPCEventBasedParser.m */,
+				BF205D2D1289BEA200C7BEBD /* XMLRPCEventBasedParserDelegate.h */,
+				BF205D2E1289BEA200C7BEBD /* XMLRPCEventBasedParserDelegate.m */,
+				BF205D2F1289BEA200C7BEBD /* XMLRPCRequest.h */,
+				BF205D301289BEA200C7BEBD /* XMLRPCRequest.m */,
+				BF205D311289BEA200C7BEBD /* XMLRPCResponse.h */,
+				BF205D321289BEA200C7BEBD /* XMLRPCResponse.m */,
 			);
 			name = XMLRPC;
 			sourceTree = "<group>";
@@ -227,6 +237,8 @@
 				BF205D391289BEA200C7BEBD /* XMLRPCResponse.m in Sources */,
 				BF205D3E1289BEAC00C7BEBD /* NSDataAdditions.m in Sources */,
 				BF205D3F1289BEAC00C7BEBD /* NSStringAdditions.m in Sources */,
+				BF205DC21289F99300C7BEBD /* PloneContentModel.m in Sources */,
+				BF205DC51289FBCE00C7BEBD /* PloneController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

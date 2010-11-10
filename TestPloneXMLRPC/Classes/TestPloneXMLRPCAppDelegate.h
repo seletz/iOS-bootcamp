@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 #import "XMLRPC.h"
+#import "PloneContentModel.h"
+#import "PloneController.h"
 
-@interface TestPloneXMLRPCAppDelegate : NSObject <UIApplicationDelegate, XMLRPCConnectionDelegate> {
+@interface TestPloneXMLRPCAppDelegate : NSObject <UIApplicationDelegate, PloneControllerDelegate> {
     UIWindow *window;
 }
 
