@@ -41,9 +41,18 @@
 }
 
 
+#pragma mark -
+#pragma mark view handling {{{1
+
 - (void)viewDidUnload {
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[self tableView] reloadData];
 }
 
 #pragma mark -
@@ -64,6 +73,21 @@
 
 #pragma mark -
 #pragma mark UITableView delegate methods {{{1
+
+- (void)        tableView:(UITableView *)tableView
+  didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DBG(indexPath);
+
+    if (!detailViewController) {
+        detailViewController = [[ItemDetailViewController alloc] init];
+    }
+
+    detailViewController.editingPossession = [possessions objectAtIndex: [indexPath row]];
+
+    [[self navigationController] pushViewController:detailViewController
+                                           animated:YES];
+}
 
 
 #pragma mark -

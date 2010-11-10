@@ -294,7 +294,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>10</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -347,10 +347,15 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BF7C6DE8128ACCF400D92B19</string>
+										<string>BF7C6E2D128AD8A100D92B19</string>
 										<key>history</key>
 										<array>
-											<string>BF7C6DDD128ACCB700D92B19</string>
+											<string>BF7C6DF9128AD23000D92B19</string>
+											<string>BF7C6E0C128AD2F200D92B19</string>
+											<string>BF7C6E0D128AD2F200D92B19</string>
+											<string>BF7C6E0E128AD2F200D92B19</string>
+											<string>BF7C6E26128AD63200D92B19</string>
+											<string>BF7C6E27128AD63200D92B19</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -531,7 +536,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>311086324.721012</real>
+	<real>311089313.45824802</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -548,10 +553,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
+		<string>BF7C6E12128AD2F200D92B19</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>BF205DE1128A9D1C00C7BEBD</string>
 		<string>/Users/seletz/develop/BNR/iOS_1/Homepwner/Homepwner.xcodeproj</string>
+		<string>BF205DE1128A9D1C00C7BEBD</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>960 59 960 1119 0 0 1920 1178 </string>
@@ -646,7 +652,7 @@
 			<key>WindowToolGUID</key>
 			<string>BF205DE1128A9D1C00C7BEBD</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -935,7 +941,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
@@ -1377,33 +1383,40 @@
 			<integer>0</integer>
 		</dict>
 		<dict>
+			<key>FirstTimeWindowDisplayed</key>
+			<false/>
 			<key>Identifier</key>
 			<string>windowTool.refactoring</string>
 			<key>IncludeInToolsMenu</key>
 			<integer>0</integer>
+			<key>IsVertical</key>
+			<true/>
 			<key>Layout</key>
 			<array>
 				<dict>
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<integer>1</integer>
+							<key>ContentConfiguration</key>
+							<dict>
+								<key>PBXProjectModuleGUID</key>
+								<string>BF7C6E11128AD2F200D92B19</string>
+							</dict>
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{0, 0}, {500, 335}</string>
+								<string>{{0, 0}, {500, 315}}</string>
 								<key>RubberWindowFrame</key>
-								<string>{0, 0}, {500, 335}</string>
+								<string>981 799 500 356 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCRefactoringModule</string>
 							<key>Proportion</key>
-							<string>100%</string>
+							<string>315pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>100%</string>
+					<string>315pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -1412,8 +1425,20 @@
 			<array>
 				<string>XCRefactoringModule</string>
 			</array>
+			<key>StatusbarIsVisible</key>
+			<true/>
+			<key>TableOfContents</key>
+			<array>
+				<string>BF7C6E12128AD2F200D92B19</string>
+				<string>BF7C6E13128AD2F200D92B19</string>
+				<string>BF7C6E11128AD2F200D92B19</string>
+			</array>
 			<key>WindowString</key>
-			<string>200 200 500 356 0 0 1920 1200 </string>
+			<string>981 799 500 356 0 0 1920 1178 </string>
+			<key>WindowToolGUID</key>
+			<string>BF7C6E12128AD2F200D92B19</string>
+			<key>WindowToolIsVisible</key>
+			<false/>
 		</dict>
 	</array>
 </dict>
