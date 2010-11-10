@@ -16,7 +16,7 @@ covers:
 
 - delegation
 
-Framework Classes:
+Framework classes:
 
 - UITextField
 - MKMapKit
@@ -29,37 +29,38 @@ covers:
 - views
 - view hierarchy, subviews
 
-Framework Classes:
+Framework classes:
 
 - UIView
 - UIScrollView
 - a little bit of CoreGraphics
 
-Notes
-=====
+HeavyRotation App
+-----------------
 
-Just random notes.
+covers:
 
-Controllers
------------
+- notification (sort of)
 
-- act as delegates for other things
+Framework classes:
 
+- UIDevice
+- NSNotificationCenter
 
-Views
-------
+Homepwner App
+-------------
 
-- have subviews
-- have a superview
+covers:
 
-Views draw themselves in their own coord system (i.e. not in screen coords).
+- view controllers
+- archiving, coding
+- table views, reordering-, editing-, adding-, deleting items
+- camera/photo picker
+- how to create a singleton in ObjectiveC/Cocoa
 
-Views are not visible until its not part of a Window.
+Framework classes:
 
-Models
-------
+- UINavigationController
+- UITableViewController, UITableView (and delegate protocols)
+- UIImagePickerController
 
-Links
-=====
-
-none so far :)

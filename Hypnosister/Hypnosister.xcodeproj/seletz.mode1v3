@@ -345,7 +345,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BF205C2712897A8E00C7BEBD</string>
+										<string>BF205C301289803700C7BEBD</string>
 										<key>history</key>
 										<array>
 											<string>BF205BD2128967EC00C7BEBD</string>
@@ -532,7 +532,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>310999694.68487102</real>
+	<real>311001143.28008097</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -549,10 +549,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>BF205BC512895EFB00C7BEBD</string>
 		<string>/Users/seletz/develop/BNR/iOS_1/Hypnosister/Hypnosister.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>960 59 960 1119 0 0 1920 1178 </string>
@@ -936,7 +936,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
