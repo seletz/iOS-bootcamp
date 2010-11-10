@@ -15,7 +15,5 @@
     UIView         *headerView;
 }
 
--(UIView *)headerView;
-
 @end
 // vim: set ts=4 sw=4 expandtab tw=78 : 

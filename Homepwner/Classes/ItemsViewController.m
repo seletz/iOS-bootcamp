@@ -30,6 +30,7 @@
     // configure the navigation bar item which will be used by the
     // UINavigationController controlling us
     self.navigationItem.leftBarButtonItem  = self.editButtonItem;
+    self.navigationItem.title = @"Homepwner";
 
     return self;
 }
@@ -43,40 +44,6 @@
 - (void)viewDidUnload {
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-}
-
-- (id)headerView
-{
-    if(headerView)
-        return headerView;
-
-    // Create a UIButton object, simple rounded rect style
-    UIButton *editButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-
-    // Set the title of this button to "Edit"
-    [editButton setTitle:@"Edit" forState:UIControlStateNormal];
-
-    // How wide is the screen?
-    float w = [[UIScreen mainScreen] bounds].size.width;
-
-    // Create a rectangle for the button
-    CGRect editButtonFrame = CGRectMake(8.0, 8.0, w - 16.0, 30.0);  
-    [editButton setFrame:editButtonFrame];
-
-    // When this button is tapped, send the message 
-    // editingButtonPressed: to this instance of ItemsViewController
-    [editButton addTarget:self 
-                   action:@selector(editingButtonPressed:) 
-         forControlEvents:UIControlEventTouchUpInside];
-
-    // Create a rectangle for the headerView that will contain the button
-    CGRect headerViewFrame = CGRectMake(0, 0, w, 48);
-    headerView = [[UIView alloc] initWithFrame:headerViewFrame];
-
-    // Add button to the headerView's view hierarchy
-    [headerView addSubview:editButton];
-
-    return headerView;
 }
 
 #pragma mark -
@@ -98,19 +65,6 @@
 #pragma mark -
 #pragma mark UITableView delegate methods {{{1
 
-- (UIView *)    tableView:(UITableView *)tableView
-   viewForHeaderInSection:(NSInteger)section
-{
-    DBGS;
-
-    return self.headerView;
-}
-
-- (CGFloat)    tableView:(UITableView *)tableView
-heightForHeaderInSection:(NSInteger)section
-{
-    return headerView.bounds.size.height;
-}
 
 #pragma mark -
 #pragma mark data source delegate methods {{{1
