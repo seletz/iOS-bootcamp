@@ -14,10 +14,13 @@
     NSString *serialNumber;
     int valueInDollars;
     NSDate *dateCreated;
+
+    NSString *imageKey;
 }
 
 @property (nonatomic, copy) NSString *possessionName;
 @property (nonatomic, copy) NSString *serialNumber;
+@property (nonatomic, copy) NSString *imageKey;
 @property (nonatomic) int valueInDollars;
 @property (readonly) NSDate *dateCreated;
 

@@ -17,6 +17,7 @@
 		69EEC54D1021D79F00CA15DA /* Possession.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EEC54C1021D79F00CA15DA /* Possession.m */; };
 		BF7C6DED128ACD5400D92B19 /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7C6DEB128ACD5400D92B19 /* ItemDetailViewController.m */; };
 		BF7C6DEE128ACD5400D92B19 /* ItemDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7C6DEC128ACD5400D92B19 /* ItemDetailViewController.xib */; };
+		BF7C6E38128AE8FB00D92B19 /* ImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7C6E37128AE8FB00D92B19 /* ImageCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		BF7C6DEA128ACD5400D92B19 /* ItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
 		BF7C6DEB128ACD5400D92B19 /* ItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
 		BF7C6DEC128ACD5400D92B19 /* ItemDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailViewController.xib; sourceTree = "<group>"; };
+		BF7C6E36128AE8FB00D92B19 /* ImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
+		BF7C6E37128AE8FB00D92B19 /* ImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 				BF7C6DEA128ACD5400D92B19 /* ItemDetailViewController.h */,
 				BF7C6DEB128ACD5400D92B19 /* ItemDetailViewController.m */,
 				BF7C6DEC128ACD5400D92B19 /* ItemDetailViewController.xib */,
+				BF7C6E36128AE8FB00D92B19 /* ImageCache.h */,
+				BF7C6E37128AE8FB00D92B19 /* ImageCache.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				69EEC5401021D42F00CA15DA /* ItemsViewController.m in Sources */,
 				69EEC54D1021D79F00CA15DA /* Possession.m in Sources */,
 				BF7C6DED128ACD5400D92B19 /* ItemDetailViewController.m in Sources */,
+				BF7C6E38128AE8FB00D92B19 /* ImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

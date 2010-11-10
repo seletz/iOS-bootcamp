@@ -11,12 +11,13 @@
 #import "Possession.h"
 
 
-@interface ItemDetailViewController : UIViewController {
+@interface ItemDetailViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
 
     IBOutlet UILabel         *dateLabel;
     IBOutlet UITextField     *nameField;
     IBOutlet UITextField     *serialNumberField;
     IBOutlet UITextField     *valueField;
+    IBOutlet UIImageView     *imageView;
 
     Possession               *editingPossession;
 

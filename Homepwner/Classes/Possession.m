@@ -11,7 +11,7 @@
 
 @implementation Possession
 
-@synthesize possessionName, serialNumber, valueInDollars, dateCreated;
+@synthesize possessionName, serialNumber, valueInDollars, dateCreated, imageKey;
 
 + (id)randomPossession {
     NSArray *randomAdjectiveList = [NSArray arrayWithObjects:@"Fluffy",
@@ -75,6 +75,7 @@
     [possessionName release]; 
     [serialNumber release];
     [dateCreated release];
+    [imageKey release];
     [super dealloc];
 }
 
